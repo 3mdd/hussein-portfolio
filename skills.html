@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills | Portfolio</title>
+  <meta name="description" content="Skills page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="badge" aria-hidden="true"></span>
+      <span>Hussein Al-Amoodi</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a class="" href="index.html">Home</a>
+      <a class="" href="about.html">About</a>
+      <a class="" href="education.html">Education</a>
+      <a class="" href="projects.html">Projects</a>
+      <a class="active" href="skills.html">Skills</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn iconbtn hamburger" data-action="menu" aria-label="Menu">☰</button>
+      <button class="btn iconbtn" data-action="theme" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="pagehead">
+      <div>
+        <h1>Skills & Qualities</h1>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card item">
+        <h3>Technical Skills</h3>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Database Design (ERD, Normalization)</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">C++</span>
+          <span class="tag">Java</span>
+        </div>
+        <p class="muted" style="margin-top:10px">I use these tools in coursework and projects to build responsive interfaces, connect databases, and deliver working systems.</p>
+      </div>
+
+      <div class="card item">
+        <h3>Personal Qualities</h3>
+        <div class="tags">
+          <span class="tag">Responsible</span>
+          <span class="tag">Hardworking</span>
+          <span class="tag">Reliable</span>
+          <span class="tag">Friendly & cooperative</span>
+          <span class="tag">Honest & professional</span>
+          <span class="tag">Critical thinking</span>
+          <span class="tag">Time management</span>
+        </div>
+        <p class="muted" style="margin-top:10px">
+          I worked in many projects and managed weekly tasks with clear communication.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>HCI Notes</h2>
+      <div class="three">
+        <div class="card item">
+          <h3>Information Architecture</h3>
+          <p class="muted">Pages are grouped logically (About, Education, Projects, Skills, Contact).</p>
+        </div>
+        <div class="card item">
+          <h3>UI Consistency</h3>
+          <p class="muted">Same navbar, buttons, spacing system, and card layout.</p>
+        </div>
+        <div class="card item">
+          <h3>Interaction Styles</h3>
+          <p class="muted">Theme toggle, mobile menu, hover effects, and smooth navigation between pages.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="y"></span> Hussein Al-Amoodi • Built with HTML/CSS for a personal HCI portfolio.</div>
+  </div>
+</main>
+<script src="script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

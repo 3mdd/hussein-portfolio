@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education | Portfolio</title>
+  <meta name="description" content="Education page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="badge" aria-hidden="true"></span>
+      <span>Hussein Al-Amoodi</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a class="" href="index.html">Home</a>
+      <a class="" href="about.html">About</a>
+      <a class="active" href="education.html">Education</a>
+      <a class="" href="projects.html">Projects</a>
+      <a class="" href="skills.html">Skills</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn iconbtn hamburger" data-action="menu" aria-label="Menu">☰</button>
+      <button class="btn iconbtn" data-action="theme" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="pagehead">
+      <div>
+        <h1>Education</h1>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="card trow">
+        <div class="top">
+          <div><b>Universiti Teknikal Malaysia Melaka (UTeM)</b> — Bachelor's Degree in Computer Science (Software Development) with Honours</div>
+          <div class="when">2023 – 2027 (Expected)</div>
+        </div>
+        <div class="muted">Relevant modules: Database Systems, IT Security, Software Engineering, Networks, Human-Computer Interaction (HCI).</div>
+      </div>
+
+     
+    </div>
+
+    <div class="section">
+      <h2>Achievements</h2>
+      <div class="list">
+        
+      <div class="card item">
+          <h3>Dean’s List (Sem 1–4)</h3>
+          <p class="muted">Awarded Dean’s List for strong academic performance across multiple semesters. (Currently in Semester 5.)</p>
+          <div style="margin-top:12px; border-radius:16px; overflow:hidden; border:1px solid var(--line);">
+            <a href="assets/deans_list_sem1-4.jpg" target="_blank" rel="noopener">
+              <img src="assets/deans_list_sem1-4.jpg" alt="Dean's List certificates collage (Sem 1–4)" style="width:100%; display:block"/>
+            </a>
+          </div>
+          <p class="help" style="margin-top:10px">Click the image to open it in full size.</p>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="footer">© <span id="y"></span> Hussein Al-Amoodi • Built with HTML/CSS for a personal HCI portfolio.</div>
+  </div>
+</main>
+<button id="backToTop" class="btn backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

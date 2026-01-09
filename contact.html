@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Portfolio</title>
+  <meta name="description" content="Contact page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="badge" aria-hidden="true"></span>
+      <span>Hussein Al-Amoodi</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn iconbtn hamburger" data-action="menu" aria-label="Menu">☰</button>
+      <button class="btn iconbtn" data-action="theme" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="pagehead">
+      <div>
+        <h1>Contact</h1>
+        <p class="muted">You can contact me using email or GitHub.</p>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card item">
+        <h3>Contact Info</h3>
+        <p class="muted">
+          Email: <b id="myEmailText">husseinalamoudi60@gmail.com</b><br/>
+          Phone: <b>+601111170382</b><br/>
+          GitHub: <b><a href="https://github.com/3mdd" target="_blank" rel="noopener">github.com/3mdd</a></b><br/>
+        </p>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <button class="btn" type="button" data-action="copy-email" data-email="husseinalamoudi60@gmail.com">
+            Copy Email
+          </button>
+
+          <!-- Gmail compose (reliable) -->
+          <button class="btn primary" type="button" id="sendEmailBtn">
+            Send Email
+          </button>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>Message Form</h3>
+
+        <form class="form" id="contactForm">
+          <input id="fromName" type="text" placeholder="Your name" required />
+          <input id="fromEmail" type="email" placeholder="Your email" required />
+          <textarea id="message" placeholder="Your message" required></textarea>
+
+          <button class="btn primary" type="submit">Send</button>
+          <div class="help">This will open an email draft in your browser (Gmail).</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="y"></span> Hussein Al-Amoodi • Built with HTML/CSS for a personal HCI portfolio.</div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  const TO = "husseinalamoudi60@gmail.com";
+
+  function openGmailCompose(subject, body) {
+    const url =
+      "https://mail.google.com/mail/?view=cm&fs=1" +
+      "&to=" + encodeURIComponent(TO) +
+      "&su=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+    window.open(url, "_blank");
+  }
+
+  // Send Email button (always works if Gmail is available)
+  document.getElementById("sendEmailBtn").addEventListener("click", () => {
+    openGmailCompose("Portfolio Contact", "Hi Hussein,\n\n");
+  });
+
+  // Form submit -> open Gmail compose with filled subject/body
+  document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("fromName").value.trim();
+    const from = document.getElementById("fromEmail").value.trim();
+    const msg  = document.getElementById("message").value.trim();
+
+    const subject = "Portfolio Message from " + (name || "Visitor");
+    const body =
+      "Name: " + name + "\n" +
+      "Email: " + from + "\n\n" +
+      "Message:\n" + msg + "\n";
+
+    openGmailCompose(subject, body);
+  });
+  <button id="backToTop" class="btn backToTop" aria-label="Back to top">↑</button>
+
+</script>
+
+</body>
+</html>

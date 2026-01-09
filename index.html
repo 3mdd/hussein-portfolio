@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Portfolio</title>
+  <meta name="description" content="Portfolio home page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="badge" aria-hidden="true"></span>
+      <span>Hussein Abdulrahman Hussein Al-Amoodi</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a class="" href="about.html">About</a>
+      <a class="" href="education.html">Education</a>
+      <a class="" href="projects.html">Projects</a>
+      <a class="" href="skills.html">Skills</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn iconbtn hamburger" data-action="menu" aria-label="Menu">☰</button>
+      <button class="btn iconbtn" data-action="theme" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="hero">
+      <div class="card left">
+        <h1>Hi, I’m <span style="color:var(--brand2)">Hussein Abdulrahman Hussein Al-Amoodi</span>.</h1>
+        <p class="muted">Bachelor's Degree in Computer Science (Software Development) with Honours • Universiti Teknikal Malaysia Melaka (UTeM) • 2027 (Expected)</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="contact.html">Contact Me</a>
+        </div>
+
+        <div class="pills">
+          <span class="pill">HCI: information organisation</span>
+          <span class="pill">UI design principles</span>
+          <span class="pill">Responsive layout</span>
+        </div>
+
+        <div class="section">
+          <h2>Quick Summary</h2>
+          <div class="grid">
+            <div class="card small">
+              <div class="kpi">6</div>
+              <div class="muted">Portfolio pages</div>
+            </div>
+            <div class="card small">
+              <div class="kpi">3</div>
+              <div class="muted">Projects showcased</div>
+            </div>
+            <div class="card small">
+              <div class="kpi">HTML/CSS</div>
+              <div class="muted">Fast & clean</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card right">
+       <div class="photo">
+          <div class="avatarWrap">
+            <img class="avatarImg" src="assets/me.png" alt="Hussein Al-Amoodi" />
+          </div>
+        </div>
+
+        <div class="card small">
+          <div style="font-weight:800">Contact</div>
+          <div class="muted">Email: husseinalamoudi60@gmail.com<br/>Phone: +601111170382<br/>Location: Melaka, Malaysia<br/>GitHub: <a href="https://github.com/3mdd" target="_blank" rel="noopener">github.com/3mdd</a>
+</div>
+        </div>
+        <div class="card small">
+  <div style="font-weight:800">Quick Links</div>
+  <div class="help" style="margin-top:6px">Direct access to my work and repositories.</div>
+
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+    <a class="btn" href="projects.html">Projects</a>
+    <a class="btn" href="https://github.com/3mdd" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://github.com/3mdd/AIRS" target="_blank" rel="noopener">AIRS</a>
+    <a class="btn" href="https://github.com/3mdd/DAD-Project" target="_blank" rel="noopener">ZZ</a>
+    <a class="btn" href="https://github.com/3mdd/utem-room-booking-system" target="_blank" rel="noopener">Booking</a>
+  </div>
+</div>
+
+
+        
+      </div>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Hussein Al-Amoodi • Built with HTML/CSS for a personal HCI portfolio.</div>
+  </div>
+</main>
+<button id="backToTop" class="btn backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

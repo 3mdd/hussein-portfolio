@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Portfolio</title>
+  <meta name="description" content="About page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="badge" aria-hidden="true"></span>
+      <span>Hussein Al-Amoodi</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a class="" href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a class="" href="education.html">Education</a>
+      <a class="" href="projects.html">Projects</a>
+      <a class="" href="skills.html">Skills</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn iconbtn hamburger" data-action="menu" aria-label="Menu">☰</button>
+      <button class="btn iconbtn" data-action="theme" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="pagehead">
+      <div>
+        <h1>About Me</h1>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card item">
+        <h3>Profile</h3>
+        <p class="muted">
+          I’m a Computer Science (Software Development) student at UTeM. I enjoy building clean interfaces, writing reliable code, and improving user experience through simple, clear design.
+        </p>
+        <div class="tags">
+          <span class="tag">Teamwork</span>
+          <span class="tag">Fast learner</span>
+          <span class="tag">Problem-solving</span>
+          <span class="tag">Communication</span>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>Details</h3>
+        <div class="meta">
+          <div><b>Name:</b> Hussein Abdulrahman Hussein Al-Amoodi</div>
+          <div><b>Email:</b> husseinalamoudi60@gmail.com</div>
+          <div><b>Phone:</b> +601111170382</div>
+          <div><b>Location:</b> Melaka, Malaysia</div>
+          <div><b>GitHub:</b> <a href="https://github.com/3mdd">github.com/3mdd</a></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="section">
+      <h2>Why this design works</h2>
+      <div class="three">
+        <div class="card item">
+          <h3>Consistency</h3>
+          <p class="muted">Same layout, colors, and typography on every page.</p>
+        </div>
+        <div class="card item">
+          <h3>Hierarchy</h3>
+          <p class="muted">Clear headings, spacing, and visual grouping using cards.</p>
+        </div>
+        <div class="card item">
+          <h3>Accessibility</h3>
+          <p class="muted">Readable contrast, large tap targets, and responsive layout.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="y"></span> Hussein Al-Amoodi • Built with HTML/CSS for a personal HCI portfolio.</div>
+  </div>
+</main>
+<button id="backToTop" class="btn backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

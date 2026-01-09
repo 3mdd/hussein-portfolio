@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Portfolio</title>
+  <meta name="description" content="Projects page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="badge" aria-hidden="true"></span>
+      <span>Hussein Al-Amoodi</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a class="" href="index.html">Home</a>
+      <a class="" href="about.html">About</a>
+      <a class="" href="education.html">Education</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a class="" href="skills.html">Skills</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn iconbtn hamburger" data-action="menu" aria-label="Menu">☰</button>
+      <button class="btn iconbtn" data-action="theme" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="pagehead">
+      <div>
+        <h1>Projects</h1>
+      </div>
+    </div>
+
+    <div class="three">
+      <div class="card item">
+        <span class="ribbon">Featured</span>
+
+        <h3>AIRS — Automated Inspection & Reporting System</h3>
+        <div class="meta"><span>Web App</span> • <span>Inspector / Manager / Admin roles</span> • <span>Status: 95% Completed</span></div>
+        <p class="muted">A system to upload inspection photos and generate standardized inspection reports with an approval flow.</p>
+        <div class="tags">
+          <span class="tag">Inspector uploads</span>
+          <span class="tag">Manager approve/reject</span>
+          <span class="tag">Admin user management</span>
+        </div>
+        <div style="margin-top:12px; border-radius:14px; overflow:hidden; border:1px solid var(--line);">
+          <img src="assets/projects/airs_1.png" alt="AIRS screenshot" style="width:100%; display:block"/>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+          <a class="btn primary" href="project-detail.html#airs">View Details</a>
+          <a class="btn" href="https://github.com/3mdd/AIRS" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>ZZ Restaurant Ordering System</h3>
+        <div class="meta"><span>HTML/CSS/JS</span> • <span>PHP</span> • <span>MySQL</span></div>
+        <p class="muted">A multi-role ordering system: customers place orders, staff manage and assign platforms, runners deliver and update status.</p>
+        <div class="tags">
+          <span class="tag">Customer ordering</span>
+          <span class="tag">Staff management</span>
+          <span class="tag">Runner delivery status</span>
+        </div>
+        <div style="margin-top:12px; border-radius:14px; overflow:hidden; border:1px solid var(--line);">
+          <img src="assets/projects/zz_1.jpg" alt="ZZ Restaurant screenshot" style="width:100%; display:block"/>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+          <a class="btn primary" href="project-detail.html#zz">View Details</a>
+          <a class="btn" href="https://github.com/3mdd/DAD-Project" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card item">
+        <h3>UTeM Rooms/Halls Booking System</h3>
+        <div class="meta"><span>C++</span> • <span>MySQL</span> • <span>Documentation + Slides</span></div>
+        <p class="muted">A booking system that allows users to check room availability, book time slots, and view/cancel bookings. Admin manages rooms and reports.</p>
+        <div class="tags">
+          <span class="tag">Availability</span>
+          <span class="tag">Bookings</span>
+          <span class="tag">Admin reports</span>
+        </div>
+        <div style="margin-top:12px; border-radius:14px; overflow:hidden; border:1px solid var(--line);">
+          <img src="assets/projects/booking_1.png" alt="Booking system screenshot" style="width:100%; display:block"/>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+          <a class="btn primary" href="project-detail.html#booking">View Details</a>
+          <a class="btn" href="https://github.com/3mdd/utem-room-booking-system" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="y"></span> Hussein Al-Amoodi • Built with HTML/CSS for a personal HCI portfolio.</div>
+  </div>
+</main>
+<button id="backToTop" class="btn backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
