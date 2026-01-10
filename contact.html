@@ -38,7 +38,7 @@
     <div class="pagehead">
       <div>
         <h1>Contact</h1>
-        <p class="muted">You can contact me using email or GitHub.</p>
+        <p class="muted">Use the buttons below to email me directly.</p>
       </div>
     </div>
 
@@ -46,20 +46,14 @@
       <div class="card item">
         <h3>Contact Info</h3>
         <p class="muted">
-          Email: <b id="myEmailText">husseinalamoudi60@gmail.com</b><br/>
+          Email: <b id="myEmail">husseinalamoudi60@gmail.com</b><br/>
           Phone: <b>+601111170382</b><br/>
           GitHub: <b><a href="https://github.com/3mdd" target="_blank" rel="noopener">github.com/3mdd</a></b><br/>
         </p>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-          <button class="btn" type="button" data-action="copy-email" data-email="husseinalamoudi60@gmail.com">
-            Copy Email
-          </button>
-
-          <!-- Gmail compose (reliable) -->
-          <button class="btn primary" type="button" id="sendEmailBtn">
-            Send Email
-          </button>
+          <button class="btn" type="button" id="copyBtn">Copy Email</button>
+          <button class="btn primary" type="button" id="gmailBtn">Send Email</button>
         </div>
       </div>
 
@@ -70,9 +64,8 @@
           <input id="fromName" type="text" placeholder="Your name" required />
           <input id="fromEmail" type="email" placeholder="Your email" required />
           <textarea id="message" placeholder="Your message" required></textarea>
-
           <button class="btn primary" type="submit">Send</button>
-          <div class="help">This will open an email draft in your browser (Gmail).</div>
+          <div class="help">Opens Gmail compose with your message filled in.</div>
         </form>
       </div>
     </div>
@@ -88,7 +81,7 @@
 
   const TO = "husseinalamoudi60@gmail.com";
 
-  function openGmailCompose(subject, body) {
+  function openGmail(subject, body){
     const url =
       "https://mail.google.com/mail/?view=cm&fs=1" +
       "&to=" + encodeURIComponent(TO) +
@@ -97,12 +90,10 @@
     window.open(url, "_blank");
   }
 
-  // Send Email button (always works if Gmail is available)
-  document.getElementById("sendEmailBtn").addEventListener("click", () => {
-    openGmailCompose("Portfolio Contact", "Hi Hussein,\n\n");
+  document.getElementById("gmailBtn").addEventListener("click", () => {
+    openGmail("Portfolio Contact", "Hi Hussein,\n\n");
   });
 
-  // Form submit -> open Gmail compose with filled subject/body
   document.getElementById("contactForm").addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -116,10 +107,18 @@
       "Email: " + from + "\n\n" +
       "Message:\n" + msg + "\n";
 
-    openGmailCompose(subject, body);
+    openGmail(subject, body);
   });
-  <button id="backToTop" class="btn backToTop" aria-label="Back to top">↑</button>
 
+  document.getElementById("copyBtn").addEventListener("click", async () => {
+    try{
+      await navigator.clipboard.writeText(TO);
+      document.getElementById("copyBtn").textContent = "Copied!";
+      setTimeout(()=> document.getElementById("copyBtn").textContent = "Copy Email", 1200);
+    }catch(e){
+      alert("Email: " + TO);
+    }
+  });
 </script>
 
 </body>
